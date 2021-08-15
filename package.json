@@ -9,6 +9,6 @@
   "author": "LiterallyFabian",
   "license": "ISC",
   "dependencies": {
-    "midi-parser-js": "^4.0.4"
+    "@tonejs/midi": "^2.0.27"
   }
 }
