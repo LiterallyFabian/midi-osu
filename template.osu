@@ -48,7 +48,7 @@ SliderTickRate:1
 //Storyboard Sound Samples
 
 [TimingPoints]
--26.9280575539569,{BPM},4,1,0,100,1,0
+-26.9280575539569,{BEATLENGTH},4,1,0,100,1,0
 
 [HitObjects]
 {HITOBJECTS}
