@@ -9,7 +9,7 @@ fs.readFile(midiName + ".mid", function (err, data) {
     fs.readFile("template.osu", "utf-8", function (err, osu) {
 
         let midiData = new Midi(data);
-        fs.writeFile(midiName + ".json", JSON.stringify(midiData), () => {})
+        fs.writeFile("out/" + midiName + ".json", JSON.stringify(midiData), () => {})
 
         let bpm = midiData.header.tempos[0].bpm;
         osu = osu.replace(/{BEATLENGTH}/g, 1 / bpm * 60 * 1000);
@@ -36,6 +36,6 @@ fs.readFile(midiName + ".mid", function (err, data) {
                 hitObjects += `256,193,${notes[i].time*1000},5,${hitsound},0:0:0:0:\n`
         }
         osu = osu.replace(/{HITOBJECTS}/g, hitObjects);
-        fs.writeFile(midiName + ".osu", osu, () => {})
+        fs.writeFile("out/" + midiName + ".osu", osu, () => {})
     })
 });
